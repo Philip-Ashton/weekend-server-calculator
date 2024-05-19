@@ -1,12 +1,14 @@
 console.log('client.js is sourced!');
 
+function getCalculations() {
+
 axios.get('/calculations')
 .then(
     function(response) {
-        console.log('the response object is:', response);
+        console.log('the calculated number is:', response);
 
         let data = response.data;
-        console.log('important payload:', data);
+        console.log('important the calculations:', data);
 
         renderToDOM(data);
     }
@@ -17,3 +19,6 @@ axios.get('/calculations')
         alert('something is wrong');
     }
 )
+}
+
+getCalculations();
