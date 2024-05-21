@@ -8,7 +8,7 @@ app.use(express.static('server/public'));
 // Global variable that will contain all of the
 // calculation objects:
 let calculations = []{
-  var operators = ["+", "-", "*", "/", "="],
+  let operators = ["+", "-", "*", "/", "="],
   operations = {
     "+": function (a, b) {
       return a + b;
